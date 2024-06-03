@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+body::-webkit-scrollbar {
+    width: 19px;              
+  }
+  body::-webkit-scrollbar-track {
+    background: #007BFF;        
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: white;    
+    border-radius: 20px;      
+    border: 5px solid #007BFF;
+  }
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    overflow: hidden;
+    height: 120px; /* 10% of viewport height */
+}
+
+header img{
+    height: 130px;
+    float: left;
+}
+
+header h1{
+    padding: 30px;
+}
+
+nav button {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: none;
+    cursor: pointer; 
+    transition: all .5s ease-in-out;
+}
+
+nav button img{
+    height: 100px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#resultados {
+    margin-top: 1rem;
+}
+
+.viagem {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+}
+
+.viagem h3 {
+    margin-top: 0;
+}
+
