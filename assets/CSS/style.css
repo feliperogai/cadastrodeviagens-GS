@@ -1,61 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-body {
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #ffffff;
+    --border-color: #cccccc;
+    --hover-color: #0056b3;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: rgba(0, 123, 255, 0.3);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
 }
 
-body::-webkit-scrollbar {
-    width: 19px;              
-  }
-  body::-webkit-scrollbar-track {
-    background: #007BFF;        
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: white;    
-    border-radius: 20px;      
-    border: 5px solid #007BFF;
-  }
+body {
+    font-family: 'Oswald', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    overflow-y: scroll;
+}
 
+/* Estilo da barra de rolagem */
+body::-webkit-scrollbar {
+    width: 19px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border: 5px solid var(--primary-color);
+}
+
+/* Estilo do cabeçalho */
 header {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 1%;
     text-align: center;
-    overflow: hidden;
-    height: 120px; /* 10% of viewport height */
+    height: 160px;
 }
 
-header img{
+header img {
     height: 130px;
     float: left;
 }
 
-header h1{
+header h1 {
     padding: 30px;
 }
 
-nav button {
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border: none;
-    cursor: pointer; 
-    transition: all .5s ease-in-out;
+/* Estilo dos botões */
+button {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-nav button img{
+button img {
+    display: block;
+    max-width: 100px;
+    height: auto;
+}
+
+button:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px var(--box-shadow-hover);
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+    border-color: var(--hover-color);
+    box-shadow: 0 4px 12px var(--box-shadow-hover);
+}
+
+/* Centro dos botões */
+center {
+    display: flex;
+    justify-content: center;
+}
+
+nav button img {
     height: 100px;
 }
 
+/* Estilo principal */
 main {
     padding: 2rem;
 }
 
+/* Estilo das seções */
 section {
     display: none;
 }
@@ -64,6 +110,7 @@ section.active {
     display: block;
 }
 
+/* Estilo dos formulários */
 form label {
     display: block;
     margin-top: 1rem;
@@ -73,27 +120,39 @@ form input, form textarea, form button {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
 }
 
 form button {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: none;
     cursor: pointer;
     margin-top: 1rem;
+    border-radius: 5px;
+    width: 100px;
 }
 
+form button:hover {
+    background-color: #2f92fc;
+}
+
+/* Estilo dos resultados */
 #resultados {
     margin-top: 1rem;
 }
 
 .viagem {
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 .viagem h3 {
     margin-top: 0;
 }
+
 
